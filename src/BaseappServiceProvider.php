@@ -29,6 +29,11 @@ class BaseappServiceProvider extends ServiceProvider
                 __DIR__.'/../resources/views' => resource_path('views/vendor/baseapp'),
             ], 'views');
 
+            // Publishing the views.
+            $this->publishes([
+                __DIR__.'/../resources/main_layouts' => resource_path('views'),
+            ], 'layouts');
+
             // Publishing assets.
             /*$this->publishes([
                 __DIR__.'/../resources/assets' => public_path('vendor/baseapp'),
